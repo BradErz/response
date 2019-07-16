@@ -6,7 +6,7 @@ os:
 xdist: xenial # required for Python >= 3.7
 language: python
 python:
-  - 3.7
+  - "3.7"
 
 env:
   global:
