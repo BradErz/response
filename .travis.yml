@@ -17,6 +17,9 @@ jobs:
     script:
     - bash ./e2e/run.sh
 
+before_deploy:
+  - ls -al
+
 deploy:
   provider: pypi
   username: monzo-response
