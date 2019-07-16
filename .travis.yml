@@ -18,7 +18,10 @@ jobs:
     - bash ./e2e/run.sh
 
 before_deploy:
-  - ls -al
+  # The E2E tests install response from a docker container using the root user,
+  # which creates a django_incident_response.egg-info directory owned by root.
+  # This messes up the PyPI deployment
+  - sudo rm -rf *.egg-info
 
 deploy:
   provider: pypi
