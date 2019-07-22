@@ -33,6 +33,7 @@ jobs:
       # This messes up the PyPI deployment
       - sudo rm -rf *.egg-info
 
+    install: skip
     deploy:
       provider: pypi
       username: monzo-response
